@@ -8,9 +8,10 @@
 
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg bg-light fixed">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -19,30 +20,27 @@
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">¿Quiénes Somos?</a>
+                <a class="nav-link" aria-current="page" href="#quienessomos">¿Quiénes Somos?</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Productos</a>
+                <a class="nav-link" href="#productos">Productos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contacto</a>
+                <a class="nav-link" href="#contacto">Contacto</a>
               </li>
             </ul>
           </div>
         </div>
     </nav>
+
+    
     <div class="container-fluid">
       <div class="row g-3">
-        <div class="carousel slide col-12" data-bs-ride="carousel" id="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carousel" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel" data-slide-to="1"></li>
-              <li data-target="#carousel" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" style="height: 80vh;" src="assets/img/1.jpg" alt="Primera imagen helado">
-                <div class="carousel-caption d-flex justify-content-center align-center flex-row">
+        <div id="carouselExampleControls" class="carousel slide col-12" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" style="height: 80vh;" src="assets/img/1.jpg" alt="Primera imagen helado">
+                  <div class="carousel-caption d-flex justify-content-center align-center flex-row">
                     <div class="carousel-caption">
                         <div class="full-width text-center d-flex justify-content-center flex-column align-items-center">
                             <img src="assets/img/logo-sin-caption.png" alt="logo" width="300px">
@@ -51,38 +49,45 @@
                             </h1>
                         </div>
                     </div>
-                </div>
+                  </div>
             </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" style="height: 80vh;" src="assets/img/2.jpg" alt="Segunda imagen helado">
-                <div class="carousel-caption d-flex justify-content-center align-center flex-row">
-                    <div class="carousel-caption">
-                        <div class="full-width text-center d-flex justify-content-center flex-column align-items-center">
-                            <img src="assets/img/logo-sin-caption.png" alt="logo" width="300px">
-                            <h1>
-                                ¡La mejor empresa de helados de Maracaibo!
-                            </h1>
+            <div class="carousel-item">
+              <img class="d-block w-100" style="height: 80vh;" src="assets/img/2.jpg" alt="Segunda imagen helado">
+                    <div class="carousel-caption d-flex justify-content-center align-center flex-row">
+                        <div class="carousel-caption">
+                            <div class="full-width text-center d-flex justify-content-center flex-column align-items-center">
+                                <img src="assets/img/logo-sin-caption.png" alt="logo" width="300px">
+                                <h1>
+                                    ¡La mejor empresa de helados de Maracaibo!
+                                </h1>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" style="height: 80vh;" src="assets/img/3.jpg" alt="Tercera imagen helado">
-                <div class="carousel-caption d-flex justify-content-center align-center flex-row">
-                    <div class="carousel-caption">
-                        <div class="full-width text-center d-flex justify-content-center flex-column align-items-center">
-                            <img src="assets/img/logo-sin-caption.png" alt="logo" width="300px">
-                            <h1>
-                                ¡Los sabores más únicos del país!
-                            </h1>
-                        </div>
-                    </div>
-                </div>
+                    </div>     
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" style="height: 80vh;" src="assets/img/3.jpg" alt="Tercera imagen helado">
+              <div class="carousel-caption d-flex justify-content-center align-center flex-row">
+                  <div class="carousel-caption">
+                      <div class="full-width text-center d-flex justify-content-center flex-column align-items-center">
+                          <img src="assets/img/logo-sin-caption.png" alt="logo" width="300px">
+                          <h1>
+                              ¡Los sabores más únicos del país!
+                          </h1>
+                      </div>
+                  </div>
               </div>
             </div>
-        </div>
-          
-        <div class="col-12"><h2 style="text-align: center;">¿Quiénes Somos?</h2></div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>         
+        <div class="col-12" id="quienessomos"><h2 style="text-align: center;">¿Quiénes Somos?</h2></div>
 
         <div class="col-md-6 col-xs-12 d-flex justify-content-center align-items-center">
           <div>
@@ -109,9 +114,9 @@
           <img src="assets/img/heladeria.jpg" width="100%" alt="heladeria imagen">
         </div>
 
-        <div class="p-3 row gy-3">
+        <div id="productos" class="p-3 row gy-3 gx-2">
           <div class="col-12"><h2 style="text-align: center;">Nuestros Productos</h2></div>
-          <div class="card col-md-3 col-xs-12">
+          <div class="card col-md-4 col-lg-3 col-sm-6 col-xs-12">
           <img src="assets/img/prod5.jpg" height="300px" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Barquillas Artesanales</h5>
@@ -120,11 +125,11 @@
               <b>Precio al Detal: </b> $8 <br>
               <b>Precio al Mayor: </b> $6
             </p>
-            <a href="#" class="btn btn-primary">Realizar Pedido</a>
+            <a href="#contacto" class="btn btn-primary">Realizar Pedido</a>
           </div>
         </div>
 
-        <div class="card col-md-3 col-xs-12">
+        <div class="card col-md-4 col-lg-3 col-sm-6 col-xs-12">
           <img src="assets/img/prod6.jpg" height="300px" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Ice Cakes</h5>
@@ -133,11 +138,11 @@
               <b>Precio al Detal: </b> $10 <br>
               <b>Precio al Mayor: </b> $8
             </p>
-            <a href="#" class="btn btn-primary">Realizar Pedido</a>
+            <a href="#contacto" class="btn btn-primary">Realizar Pedido</a>
           </div>
         </div>
 
-        <div class="card col-md-3 col-xs-12">
+        <div class="card col-md-4 col-lg-3 col-sm-6 col-xs-12">
           <img src="assets/img/prod7.jpg" height="300px" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Tortas de Helado</h5>
@@ -146,11 +151,11 @@
               <b>Precio al Detal: </b> $15 <br>
               <b>Precio al Mayor: </b> $10
             </p>
-            <a href="#" class="btn btn-primary">Realizar Pedido</a>
+            <a href="#contacto" class="btn btn-primary">Realizar Pedido</a>
           </div>
         </div>
 
-        <div class="card col-md-3 col-xs-12">
+        <div class="card col-md-4 col-lg-3 col-sm-6 col-xs-12">
           <img src="assets/img/prod8.jpg" class="card-img-top" height="300px" alt="...">
           <div class="card-body">
             <h5 class="card-title">Paletas Mixtas</h5>
@@ -159,13 +164,13 @@
               <b>Precio al Detal: </b> $12 <br>
               <b>Precio al Mayor: </b> $10
             </p>
-            <a class="btn btn-primary">Realizar Pedido</a>
+            <contactoa class="btn btn-primary">Realizar Pedido</contactoa>
           </div>
         </div>
 
         <!-- 4 -->
 
-        <div class="card col-md-3 col-xs-12">
+        <div class="card col-md-4 col-lg-3 col-sm-6 col-xs-12">
           <img src="assets/img/prod1.jpg" height="300px" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Sándwiches Artesanales</h5>
@@ -174,11 +179,11 @@
               <b>Precio al Detal: </b> $8 <br>
               <b>Precio al Mayor: </b> $6
             </p>
-            <a href="#" class="btn btn-primary">Realizar Pedido</a>
+            <a href="#contacto" class="btn btn-primary">Realizar Pedido</a>
           </div>
         </div>
 
-        <div class="card col-md-3 col-xs-12">
+        <div class="card col-md-4 col-lg-3 col-sm-6 col-xs-12">
           <img src="assets/img/prod2.jpg" height="300px" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Sándwiches MIX</h5>
@@ -187,11 +192,11 @@
               <b>Precio al Detal: </b> $8 <br>
               <b>Precio al Mayor: </b> $6
             </p>
-            <a href="#" class="btn btn-primary">Realizar Pedido</a>
+            <a href="#contacto" class="btn btn-primary">Realizar Pedido</a>
           </div>
         </div>
 
-        <div class="card col-md-3 col-xs-12">
+        <div class="card col-md-4 col-lg-3 col-sm-6 col-xs-12">
           <img src="assets/img/prod3.jpg" height="300px" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Tazas Mix</h5>
@@ -204,7 +209,7 @@
           </div>
         </div>
 
-        <div class="card col-md-3 col-xs-12">
+        <div class="card col-md-4 col-lg-3 col-sm-6 col-xs-12">
           <img src="assets/img/prod4.jpg" class="card-img-top" height="300px" alt="...">
           <div class="card-body">
             <h5 class="card-title">Mini Barquillas</h5>
@@ -219,21 +224,83 @@
 
         </div>
 
+        <div class="col-12" id="contacto"><h2 style="text-align: center;">Contáctanos</h2></div>
+        <form class="row gy-1 gx-3">
+          <div class="input-group col-12">
+            <span class="input-group-text">Nombres y Apellidos*</span>
+            <input type="text" placeholder="Nombres*" aria-label="First name" class="form-control">
+            <input type="text" placeholder="Apellidos*" aria-label="Last name" class="form-control">
+          </div>
+          <div class="col-md-6 col-xs-12">
+            <label class="form-label" for="correo">Correo Electrónico*</label>
+            <input type="text" placeholder="Ejemplo: diegofaria@gmail.com" name="correo" id="correo" class="form-control">
+          </div> 
+          <div class="col-md-6 col-xs-12">
+            <label class="form-label" for="telefono">Teléfono</label>
+            <input type="text" placeholder="Ejemplo: +584121273360" name="telefono" id="telefono" class="form-control">
+          </div>
+          <div class="col-xs-12">
+            <label class="form-label" for="informacion">Información*</label>
+            <textarea name="informacion" placeholder="Ingrese la información que nos desee hacer llegar." id="informacion" class="form-control"></textarea>
+          </div>
+          <div class="col-3"></div> 
+          <button type="submit" class="btn btn-primary col-6 mt-3 mb-3">Enviar</button>
+          <div class="col-3"></div> 
+        </form>
       </div>      
     </div>
     
-    <footer>
-
+    <footer class="bg-light text-center text-lg-start">
+      <div class="container p-4">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Redes Sociales <i class="fa-solid fa-wifi"></i></h5>
+    
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a target="_blank" href="https://www.facebook.com/" class="text-dark">Facebook <i class="fa-brands fa-facebook"></i></a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.instagram.com/" class="text-dark">Instagram <i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li>
+                <a target="_blank" href="https://twitter.com/home?lang=es" class="text-dark">Twitter <i class="fa-brands fa-twitter"></i></a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.linkedin.com/" class="text-dark">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">SUCURSALES <i class="fa-solid fa-location-pin"></i></h5>
+    
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a target="_blank" href="https://www.google.com/maps/@10.6199383,-71.6791893,15z?hl=es" class="text-dark">La Limpia</a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.google.com/maps/@10.6199383,-71.6791893,15z?hl=es" class="text-dark">Circunvalación 2</a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.google.com/maps/@10.6199383,-71.6791893,15z?hl=es" class="text-dark">Delicias</a>
+              </li>
+              <li>
+                <a target="_blank" href="https://www.google.com/maps/@10.6199383,-71.6791893,15z?hl=es" class="text-dark">Belloso</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          </div>
+        </div>
+      </div>
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 Copyright Diego Faria. Todos los derechos reservados.
+      </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
-    <script>
-        const myCarousel = document.getElementById('#carousel');
-        const carousel = new bootstrap.Carousel(myCarousel, {
-          interval: 1,
-          cycle: true
-        });
-    </script>
 </body>
 </html>
