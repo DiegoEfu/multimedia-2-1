@@ -226,15 +226,20 @@
         </div>
 
         <div class="col-12" id="contacto"><h2 style="text-align: center;">Contáctanos</h2></div>
-        <form class="row gy-1 gx-3">
-          <div class="input-group col-12">
-            <span class="input-group-text">Nombres y Apellidos*</span>
-            <input type="text" placeholder="Nombres*" aria-label="First name" class="form-control">
-            <input type="text" placeholder="Apellidos*" aria-label="Last name" class="form-control">
+        <form class="row gy-1 gx-3" id="form-contacto">
+          <div class="col-md-6 col-xs-12">
+            <label class="form-label" for="nombre">Nombres*</label>
+            <input type="text" placeholder="Ingrese su o sus nombres." name="nombre" id="nombre" class="form-control" required>
           </div>
+
+          <div class="col-md-6 col-xs-12">
+            <label class="form-label" for="apellido">Apellidos*</label>
+            <input type="text" placeholder="Ingrese su o sus apellidos." name="apellido" id="apellido" class="form-control" required>
+          </div>
+
           <div class="col-md-6 col-xs-12">
             <label class="form-label" for="correo">Correo Electrónico*</label>
-            <input type="text" placeholder="Ejemplo: diegofaria@gmail.com" name="correo" id="correo" class="form-control">
+            <input type="email" placeholder="Ejemplo: diegofaria@gmail.com" name="correo" id="correo" class="form-control" required>
           </div> 
           <div class="col-md-6 col-xs-12">
             <label class="form-label" for="telefono">Teléfono</label>
@@ -242,10 +247,10 @@
           </div>
           <div class="col-xs-12">
             <label class="form-label" for="informacion">Información*</label>
-            <textarea name="informacion" placeholder="Ingrese la información que nos desee hacer llegar." id="informacion" class="form-control"></textarea>
+            <textarea name="informacion" placeholder="Ingrese la información que nos desee hacer llegar." id="informacion" class="form-control" required></textarea>
           </div>
           <div class="col-3"></div> 
-          <button type="submit" class="btn btn-primary col-6 mt-3 mb-3">Enviar</button>
+          <button type="submit" class="btn btn-primary col-6 mt-3 mb-3">Enviar Formulario</button>
           <div class="col-3"></div> 
         </form>
       </div>      
@@ -303,5 +308,27 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
-</body>
+
+    <script>
+    $('#form-contacto').submit((e) => {
+      e.preventDefault();
+      
+      if(!$('#nombre').val().trim().match(/^[A-Za-z\s]+$/g))
+        alert("El campo de nombres solo debe estar formado por letras y espacios entre palabras.");
+      else if(!$('#apellido').val().trim().match(/^[A-Za-z\s]+$/g))
+        alert("El campo de apellidos solo debe estar formado por letras y espacios entre palabras.");
+      else if($('#email').val() === ''){
+        alert("El email no puede estar vacío.");
+      }
+      else if($('#contenido').val() === ''){
+        alert("El contenido no puede estar vacío.");
+      }
+      else{
+        alert("El formulario ha sido enviado");
+        $('input').val('');
+        $('textarea').val('');
+      }
+    })      
+    </script>
+  </body>
 </html>
